@@ -1,18 +1,20 @@
 /* eslint-disable prettier/prettier */
-import {  Injectable, UnauthorizedException, HttpException, HttpStatus, UnprocessableEntityException } from '@nestjs/common';
+import {  Injectable, UnauthorizedException, HttpException, HttpStatus } from '@nestjs/common';
 import axios from 'axios';
 import * as querystring from 'querystring';
+import { config } from 'config';
 
 @Injectable()
 export class ApiService {
-    async getAccessToken( tempraryCode:string ) {
-        const url = await this.getUrl(tempraryCode);
+    async getAccessToken( temporaryCode:string ) {
+        const url = await this.getUrl(temporaryCode);
 
         const data = await axios({
             method: 'post',
             url: url,
             headers: {
-                Accept:'application/json'
+                Accept:'application/json',
+                'User-Agent':'pandeykushagra51',
             }
         })
         .then((axiosResponse)=> axiosResponse.data)
@@ -29,9 +31,10 @@ export class ApiService {
         
         const data1 = await axios({
             method: 'post',
-            url: 'https://api.github.com/repos/pandeykushagra51/C-Server/generate',
+            url: `https://api.github.com/repos/${config.TEMPLATE_OWNER}/${config.TEMPLATE_REPO}/generate`,
             headers: {
                 Accept:'application/json',
+                'User-Agent':'pandeykushagra51',
                 Authorization:`Bearer ${access_token}`,
             },
             data: {"name":repoName,"description":"This is your first code repository","include_all_branches":false,"private":false},
@@ -55,8 +58,8 @@ export class ApiService {
     async getUrl(data:string){
         const rootUrl = 'https://github.com/login/oauth/access_token';
         const options = {
-            client_id: 'e6091bdbec940c89e8cb',
-            client_secret: '3828704b49c265beb486f9ce78367d74a7b75c00',
+            client_id: config.GITHUB_CLIENT_ID,
+            client_secret: config.GITHUB_CLIENT_SECRET,
             code:data,
             scope: 'repo'
         };
