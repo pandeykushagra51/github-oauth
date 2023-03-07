@@ -3,26 +3,26 @@
 
 This project is created using **NestJs and Typescript** and hosted on aws ec2 instance, more details os given at the end of project
 
-## Follow the below steps to run the prject in local
+# Follow the below steps to run the prject in local
 
 Please note that the project can only run on http://127.0.0.1:3000 as github redirect uri always try to redirect you to this host only
 
-# Clone the git repositry by copying and pasting below command in terminal
+## Clone the git repositry by copying and pasting below command in terminal
 
 ```bash
 $ git clone https://github.com/pandeykushagra51/github-oauth.git
 ```
-# Move to directory containing project
+## Move to directory containing project
 
 ```bash
 $ cd github-oauth
 ```
-# Install dependency
+## Install dependency
 
 ```bash
 $ npm install
 ```
-# Running the project
+## Running the project
 
 ```bash
 $ npm run start
