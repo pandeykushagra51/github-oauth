@@ -26,10 +26,25 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Clone the git repositry by copying and pasting below command in terminal
+
+```bash
+$ git clone https://github.com/pandeykushagra51/github-oauth.git
+```
+## Move to directory containing project
+
+```bash
+$ cd github-oauth
+```
+## Install dependency
 
 ```bash
 $ npm install
+```
+## Running the project
+
+```bash
+$ npm run start
 ```
 
 ## Running the app
@@ -57,6 +72,11 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+## Varioous pages in application
+/login -- this page is used to go go to authorization page
+/user  -- this page is used to enter the name of repo and create the repo 
+
+if user want to create repo with different account then he/she can simply logout from /user page and then clicking the link to signin as different user
 
 ## Support
 
