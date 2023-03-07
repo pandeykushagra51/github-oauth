@@ -10,22 +10,22 @@ Please note that the project can only run on http://127.0.0.1:3000 as github red
 ## Clone the git repositry by copying and pasting below command in terminal
 
 ```bash
-$ git clone https://github.com/pandeykushagra51/github-oauth.git
+git clone https://github.com/pandeykushagra51/github-oauth.git
 ```
 ## Move to directory containing project
 
 ```bash
-$ cd github-oauth
+cd github-oauth
 ```
 ## Install dependency
 
 ```bash
-$ npm install
+npm install
 ```
 ## Running the project
 
 ```bash
-$ npm run start
+npm run start
 ```
 
 ## Routes for varioous pages in application
