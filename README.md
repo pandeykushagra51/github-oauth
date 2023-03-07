@@ -42,6 +42,6 @@ if user want to create repo with different account then he/she can simply logout
 
 ## Feel free to reach out to me at any time if you find any error
 
-- email - [Kushagra Pandey](pandeykushagra51@gmail.com)
+- email - kushagra.pandey.iitd@gmail.com
 - Phone - 8252103987
 
